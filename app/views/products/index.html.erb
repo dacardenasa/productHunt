@@ -1,21 +1,27 @@
-<h1>Listado Productos</h1>
-<table>
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>Name</th>
-      <th>Url</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.id %></td>
-        <td><%= product.name %></td>
-        <td><a href="#"><%= product.url %></a></td>
-        <td><%= product.description %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+  <h1>Productos</h1>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>Url</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.id %></td>
+            <td><%= product.name %></td>
+            <td><a href="#"><%= product.url %></a></td>
+            <td><%= product.description %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</div>

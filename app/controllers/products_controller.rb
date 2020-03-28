@@ -21,6 +21,10 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
   private
     def product_score
       params.require(:product).permit(:name, :url, :description)

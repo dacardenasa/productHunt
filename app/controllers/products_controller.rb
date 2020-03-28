@@ -25,6 +25,15 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def update
+    @product = Product.find(params[:id])
+    if @product.update(product_score)
+      redirect_to products_path, notice: "Producto ha sido modificado con éxito"
+    else
+      render :edit
+    end
+  end
+
   private
     def product_score
       params.require(:product).permit(:name, :url, :description)

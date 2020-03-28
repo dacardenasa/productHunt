@@ -13,6 +13,7 @@
           <th>Url</th>
           <th>Description</th>
           <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -23,6 +24,7 @@
             <td><a href="<%= product.url %>" target="_blank"><%= product.url %></a></td>
             <td><%= product.description %></td>
             <td><%= link_to "Editar", edit_product_path(product) %></td>
+            <td><%= link_to "Eliminar", product, method: :delete, data: { confirm: "¿Esta seguro de eliminar este producto?" } %></td>
           </tr>
         <% end %>
       </tbody>

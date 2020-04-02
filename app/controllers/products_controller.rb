@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  # Use it to control access to al pages in controller except index and show
+  # create private_access method 
+  before_action :private_access, except: [:index, :show]
 
   def index
     @products = Product.all

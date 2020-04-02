@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_152758) do
+ActiveRecord::Schema.define(version: 2020_04_02_130610) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "url"
     t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", limit: 100
+    t.string "password_digest"
+    t.string "name", limit: 100
+    t.string "twitter_handle", limit: 50
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

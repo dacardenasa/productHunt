@@ -11,5 +11,6 @@
 #
 
 class Product < ApplicationRecord
-  
+  validates :name, :url, :description, presence: true
+
 end

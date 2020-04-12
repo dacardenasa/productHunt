@@ -13,5 +13,7 @@
 
 class Product < ApplicationRecord
   belongs_to :user
+  has_many :comments
+  
   validates :name, :url, :description, presence: true
 end

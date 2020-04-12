@@ -25,8 +25,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'gravatar-ultimate'
 # Use to add complement to work gravatar-ultimate
 gem 'xmlrpc'
-# Add font-awesome , no support to Glyph-Icons bootstrap 4
-gem "font-awesome-rails"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'annotate', '~> 2.7', '>= 2.7.1'

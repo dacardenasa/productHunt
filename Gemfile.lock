@@ -61,6 +61,16 @@ GEM
     annotate (2.7.5)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 13.0)
+    aws-eventstream (1.1.0)
+    aws-sdk (2.11.486)
+      aws-sdk-resources (= 2.11.486)
+    aws-sdk-core (2.11.486)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.11.486)
+      aws-sdk-core (= 2.11.486)
+    aws-sigv4 (1.1.1)
+      aws-eventstream (~> 1.0, >= 1.0.2)
     bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.6)
@@ -90,6 +100,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
+    jmespath (1.4.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -227,6 +238,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 2.7, >= 2.7.1)
+  aws-sdk (~> 2.3)
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug

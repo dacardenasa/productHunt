@@ -33,7 +33,7 @@
                   <li><%= link_to "Salir", logout_path, method: :delete %></li>
                 </ul>
               </li>
-              <li><%= link_to fa_icon("plus-square").html_safe, new_product_path %></li>
+              <li class="ml-2"><%= link_to "<i class='fas fa-plus-square'></i>".html_safe, new_product_path %></li>
             <% else %>
               <li class="nav-item">
                 <%= link_to "Regístrate", new_user_path, class: "nav-link"%>

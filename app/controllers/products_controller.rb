@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_score)
+    @product.user = current_user
     if @product.save
       redirect_to products_path, notice: "El producto fue creado con éxito"
     else

@@ -20,7 +20,7 @@ class Product < ApplicationRecord
   has_many :comments
   has_many :votes
 
-  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>"}, :url => ':s3_domain_url' 
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>"} 
 
   validates :name, :url, :description, presence: true
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

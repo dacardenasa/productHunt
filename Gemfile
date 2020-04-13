@@ -29,7 +29,7 @@ gem 'xmlrpc'
 # gem 'image_processing', '~> 1.2'
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 gem "paperclip", "~> 6.0.0"
-gem 'aws-sdk', '~> 2.0'
+gem 'aws-sdk', '~> 3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

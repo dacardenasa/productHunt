@@ -52,5 +52,16 @@
     <% end %>
     
     <%= yield %>
+
+    <!--
+    Print environment vars to test
+    <ul>
+      <li><%= "SENDGRID_USER_NAME: #{ENV['SENDGRID_USER_NAME']}" %></li>
+      <li><%= "SENDGRID_PASSWORD: #{ENV['SENDGRID_PASSWORD']}" %></li>
+      <li><%= "SENDGRID_API_KEY: #{ENV['SENDGRID_API_KEY']}" %></li> 
+      <li><%= "HOSTNAME: #{ENV['HOSTNAME']}" %></li>
+    </ul>
+    -->
+
   </body>
 </html>

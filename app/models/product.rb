@@ -20,7 +20,9 @@ class Product < ApplicationRecord
   has_many :comments
   has_many :votes
 
-  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>"} 
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>"}
+  attr_accessor :image_file_name
+  attr_accessor :image_content_type
 
   validates :name, :url, :description, presence: true
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

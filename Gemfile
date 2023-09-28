@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.4.4'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -26,11 +26,15 @@ gem 'gravatar-ultimate'
 # Use to add complement to work gravatar-ultimate
 gem 'xmlrpc'
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 gem 'annotate', '~> 2.7', '>= 2.7.1'
-gem "paperclip", "~> 6.0.0"
+gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '~> 3'
 gem 'sendgrid-ruby'
+# gems installed manually
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+gem 'psych', '< 4.0.0'
+# until here
 gem "figaro"
 gem "letter_opener", :group => :development
 # Reduces boot times through caching; required in config/boot.rb
@@ -53,6 +57,7 @@ group :development do
 end
 
 group :test do
+  gem 'minitest', '~> 5.20'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
@@ -68,3 +73,5 @@ group :production do
   gem 'pg', '~> 0.18.4'
 end
 
+
+gem "dotenv-rails", "~> 2.8"

@@ -39,3 +39,6 @@ sendgrid.env
 
 # Ignore application configuration
 /config/application.yml
+yarn.lock
+Gemfile.lock
+.env

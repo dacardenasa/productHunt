@@ -1,7 +1,7 @@
 class AddAttachmentImageToProducts < ActiveRecord::Migration[6.0]
   def self.up
     change_table :products do |t|
-      t.attachment :image
+      t.change :image, :attachment
     end
   end
 
